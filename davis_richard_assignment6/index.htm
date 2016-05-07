@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Richard Davis' Kung Fu School</title>
+    <link rel="stylesheet" type="text/css" href="main.css">
+  </head>
+  <body>
+    <script type="text/javascript">
+      function loadDoc() {
+        var xhttp = new XMLHttpRequest();
+        xhttp.onreadystatechange = function() {
+          if (xhttp.readyState == 4 && xhttp.status == 200) {
+            document.getElementById("ajax").innerHTML = xhttp.responseText;
+          }
+        };
+        var minGPA = document.getElementById('minGPA').value;
+        var queryString = "?minGPA=" + minGPA;
+        xhttp.open("GET", "richarddavis_search.php" + queryString, true);
+        xhttp.send();
+      }
+    </script>
+    <header>
+      <h1>Richard Davis's Kung Fu School - Search Student<h1>
+    </header>
+    <section>
+      <h3>Search for students with the minimum GPA</h3>
+      <form name="filterGPA">
+        <label>Minimum GPA:</label>
+        <input type="text" id="minGPA">
+        <br>
+        <input type="button" onclick="loadDoc();" value="Search">
+        <br><br>
+      <div id="ajax">
+        <p>Students with GPA's higher than the minimum GPA will be displayed here.</p>
+      </div>
+      <br>
+      <a href="">Search & Split</a>
+    </section>
+    <footer>
+    <p>&copy; <?php echo date("Y"); ?> Richard Davis Kung Fu School</p>
+    </footer>
+  </body>
+</html>

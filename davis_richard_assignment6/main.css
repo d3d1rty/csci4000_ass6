@@ -62,19 +62,11 @@ input[type="text"] {
   width: 10em;
   margin-bottom: .5em;
 }
-input[type="submit"] {
+input[type="button"] {
   font: 100% Arial, Helvetica, sans-serif;
   color: #0f0a01;
   float: left;
   margin-bottom: .5em;
-  background-color: #fbe5bc;
-  border: 1px solid #f9d490;
-  border-radius: 4px;
-}
-.s_delete {
-  width: 100%;
-  margin-bottom: .5em;
-  margin-top: .5em;
   background-color: #fbe5bc;
   border: 1px solid #f9d490;
   border-radius: 4px;
@@ -116,6 +108,10 @@ th {
   padding: .5em;
 }
 .s_email {
+  text-align: right;
+  padding: .5em;
+}
+.s_gpa {
   text-align: right;
   padding: .5em;
 }
