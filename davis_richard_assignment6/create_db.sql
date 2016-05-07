@@ -14,16 +14,17 @@ CREATE TABLE student (
 
 /* inserts test data */
 INSERT INTO student VALUES
-(1, 'Dirk Benson', 'dirk@diddler.com', 3.2),
-(2, 'Dean Johnston', 'dean@hello.com', 3.1),
-(3, 'Mac Leonard', 'macdaddy@example.com', 3.4),
-(4, 'Sean Pritchard', 'bigsean@wonderworld.net', 3.8),
-(5, 'Audree Paul', 'audrizzle@aol.com', 3.0),
-(6, 'Kathy Biggums', 'sleepykathy@yahoo.com', 2.4),
-(7, 'Marc Englewood', 'marc@gmail.com', 2.9),
-(8, 'Esther Jindal', 'esther@hotmail.com', 2.0),
-(9, 'Ben Manzelle', 'bennyboy@mafia.com', 3.6),
-(10, 'Tom Isaiah', 'tomas@gmail.com', 2.2);
+(1, 'PO BLACK', 'poblack@gmail.com', 3.51),
+(2, 'SHIFU HOFFMAN', 'shifuhoffman@gmail.com', 2.52),
+(3, 'TIGRESS JOLIE', 'tigressjolie@gmail.com', 3.63),
+(4, 'JENNIFER YUH', 'jenniferyuh@gmail.com', 1.44),
+(5, 'OX STORMING', 'oxstorming@gmail.com', 3.95),
+(6, 'MONKEY CHAN', 'monkeychan@gmail.com', 4.00),
+(7, 'VIPER LIU', 'viperliu@gmail.com', 2.37),
+(8, 'MANTIS ROGEN', 'mantisrogen@gmail.com', 3.29),
+(9, 'CRANE CROSS', 'cranecross@gmail.com', 3.72),
+(10, 'OOGWAY KIM', 'oogwaykim@gmail.com', 1.53),
+(11, 'PING HONG', 'pinghong@gmail.com', 2.52);
 
 /* creates user */
 GRANT SELECT, INSERT, UPDATE, DELETE
