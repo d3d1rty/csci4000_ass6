@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Richard Davis' Kung Fu School</title>
+    <link rel="stylesheet" type="text/css" href="main.css">
+  </head>
+  <body>
+    <script type="text/javascript">
+      function loadDoc() {
+        var xhttp = new XMLHttpRequest();
+        xhttp.onreadystatechange = function() {
+          if (xhttp.readyState == 4 && xhttp.status == 200) {
+            var record = xhttp.responseText.split("|");
+            document.getElementById("id").setAttribute("value", record[0]);
+            document.getElementById("name").setAttribute("value", record[1]);
+            document.getElementById("email").setAttribute("value", record[2]);
+            document.getElementById("gpa").setAttribute("value", record[3]);
+          }
+        };
+        var s_id = document.getElementById('search').value;
+        var queryString = "?s_id=" + s_id;
+        xhttp.open("GET", "richarddavis_search_single.php" + queryString, true);
+        xhttp.send();
+      }
+    </script>
+    <header>
+      <h1>Richard Davis's Kung Fu School - Search & Split</h1>
+    </header>
+    <section>
+      <h3>Search for students by studentID</h3>
+      <form name="search-by-id">
+        <label>StudentID:</label>
+        <input type="text" id="search">
+        <br>
+        <input type="button" onclick="loadDoc();" value="Search">
+      </form>
+      <br><br>
+      <p>Student information will be displayed in the textboxes below:</p>
+      <br>
+      <form name="displayResults">
+        <label>Student ID:</label>
+        <input type="text" id="id" readonly><br>
+        <label>Student Name:</label>
+        <input type="text" id="name" readonly><br>
+        <label>Email:</label>
+        <input type="text" id="email" readonly><br>
+        <label>GPA:</label>
+        <input type="text" id="gpa" readonly><br>
+      </form>
+      <br>
+      <a href="index.htm">Back to first page</a>
+    </section>
+    <footer>
+    <p>&copy; <?php echo date("Y"); ?> Richard Davis Kung Fu School</p>
+    </footer>
+  </body>
+</html>
